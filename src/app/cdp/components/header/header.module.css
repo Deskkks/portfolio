@@ -1,0 +1,41 @@
+﻿.header {
+  display: flex;
+  border-bottom: 1px black solid;
+  background-color: #deedf9;
+  box-shadow: 1px 0px 10px rgb(106, 106, 106);
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.header div {
+  display: flex;
+  align-items: center;
+  margin: 15px 50px;
+}
+
+.header a {
+  color: black;
+  text-decoration: none;
+}
+
+.nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav a {
+  margin: 0 10px 3px;
+  padding: 5px;
+  transition: .2s;
+}
+
+.nav a:hover {
+  border-bottom: solid 1px #1988ff80;
+}
+
+.login{
+  margin-right: 50px;
+}

@@ -1,0 +1,34 @@
+﻿.conteiner{
+  display: flex;
+  flex-direction: column;
+  width: 55%;
+  height: 90%;
+}
+
+.conteinerCard{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  height: 100%;
+  border: 1px black solid;
+  margin-bottom: 55px;
+  border-radius: 5px;
+}
+
+.card{
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  margin: 5px 20px;
+  border-radius: 10px;
+  background-color: hsla(211, 100%, 55%, 0.5);
+}
+
+.card:hover{
+  background-color: rgba(25, 136, 255, 0.8);
+}
+
+.outroMes{
+  opacity: 0.5;
+}

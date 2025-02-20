@@ -1,0 +1,32 @@
+﻿
+.cabecalho{
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.cabecalho > div {
+  margin: 0 10px;
+}
+
+.infos {
+  display: flex;
+  width: 120px;
+  justify-content: center;
+}
+
+.infos > div {
+  cursor: pointer;
+  padding: 2px 5px;
+  border-radius: 15px;
+}
+
+.infos > div:hover {
+  background-color: #1988ff99;
+}
+
+.button > button{
+  padding: 2px 5px;
+  margin: 0;
+  width: fit-content;
+}

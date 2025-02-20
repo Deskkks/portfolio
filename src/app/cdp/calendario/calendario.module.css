@@ -1,0 +1,19 @@
+﻿.main{
+  display: flex;
+  justify-content: center;
+  background-color: #1a88ffcc;
+  max-height: auto;
+  height: 100vh;
+}
+
+.conteiner{
+  margin-top: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #deedf9;
+  width: 90%;
+  border-radius: 15px;
+  border: 1px #000 solid;
+  height: 85%;
+}

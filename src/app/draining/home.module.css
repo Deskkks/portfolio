@@ -1,0 +1,28 @@
+﻿.main {
+  height: 572px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.infos {
+  margin: 0 25px;
+}
+
+.infos > p {
+  display: flex;
+  align-items: center;
+}
+
+.infos svg {
+  height: 7px;
+  width: 7px;
+  margin: 0 5px 0
+}
+
+.circle {
+  background-color: #000;
+  width: 5px;
+  height: 5px;
+  border-radius: 5px;
+}

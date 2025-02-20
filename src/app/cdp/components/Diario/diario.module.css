@@ -1,0 +1,38 @@
+﻿.conteiner{
+  height: 80%;
+}
+
+.form{
+  height: 100%;
+}
+
+.input {
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+
+.checkmark{
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  margin: 10px 5px;
+}
+
+.text{
+  height: 80%;
+  margin: 0 5px;
+}
+
+.text textarea{
+  resize: none;
+  height: 100%;
+}
+
+.button{
+  margin: 10px 5px;
+}
+
+.button > button{
+  padding: 5px 0;
+}
