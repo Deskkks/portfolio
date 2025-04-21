@@ -1,16 +1,16 @@
-﻿import classeModel from "@/model/classificacao";
+﻿import { PrismaClient } from "@/generated/prisma/client"
+const prisma = new PrismaClient()
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 
 export async function GET(){
-  const data = await classeModel.findAll()
-  
+  const data = await prisma.classe.findMany()
   return Response.json(data)
 }
 
 export async function POST(req){
 
-  const dados = await classeModel.findAll()
+  const dados = await prisma.classe.findMany()
 
 
   const cookieStore = await cookies()
@@ -21,17 +21,17 @@ export async function POST(req){
   const descricao = formData.get('descricao')
   const data = formData.get('data')
 
-  dados.map(dado => {
+  dados.map(async (dado) => {
     if(data === dado.data){
-      classeModel.update(
-        {
-          classe: classe,
-          descricao: descricao
-        },
+      const update = await prisma.classe.update(
         {
           where: {
             data: data,
             usuario: login.value
+          },
+          data: {
+            classe: classe,
+            descricao: descricao
           }
         }
       )
@@ -39,11 +39,13 @@ export async function POST(req){
     }
   })
 
-  classeModel.create({
-    classe: classe,
-    descricao: descricao,
-    data: data,
-    usuario: login.value
+  const create = await prisma.classe.create({
+    data: {
+      classe: classe,
+      descricao: descricao,
+      data: data,
+    }
   })
+  console.log(create)
   redirect(`/cdp/calendario`)
 }

@@ -1,15 +1,16 @@
-﻿import bueiroModel from "@/model/bueiro"
+﻿import { PrismaClient } from "@/generated/prisma/client"
+const prisma = new PrismaClient()
 
 export async function GET(){
 
-  const data = await bueiroModel.findAll()
+  const data = await prisma.bueiros.findMany()
   
   return Response.json(data)
 }
 
 export async function POST(req) {
 
-  const data = await bueiroModel.findAll()
+  const data = await prisma.bueiros.findMany()
 
   const formData = await req.formData()
   const search = formData.get('search')

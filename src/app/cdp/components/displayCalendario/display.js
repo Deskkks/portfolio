@@ -141,7 +141,7 @@ export default function DisplayCalendario(){
           </div>
         </div>
         {
-          classes.length > 0 &&(
+          classes.length > 0 && (
             <div className={styles.dias}>
               {
                 calendarioInfos ? (

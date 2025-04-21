@@ -65,23 +65,23 @@ export default function Map({Search}){
   
   return(
     <div className={style.map}>
-        <MapContainer center={[-23.547754, -46.648428]} zoom={14} doubleClickZoom={false} zoomControl={false}>
-          <TileLayer
-            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          />
-          <ZoomControl position="topright" />
-          {
-            bueiros.length > 0 && (
-              bueiros.map((bueiro, index) => ( 
-                <Marker icon={bueiro.icon} position={bueiro.position} key={index}></Marker>
-              ))
-            )
-          }
-          {
-            Search && <Search/>
-          }
-        </MapContainer>
-      </div>
+      <MapContainer center={[-23.547754, -46.648428]} zoom={14} doubleClickZoom={false} zoomControl={false}>
+        <TileLayer
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        />
+        <ZoomControl position="topright" />
+        {
+          bueiros.length > 0 && (
+            bueiros.map((bueiro, index) => ( 
+              <Marker icon={bueiro.icon} position={bueiro.position} key={index}></Marker>
+            ))
+          )
+        }
+        {
+          Search && <Search/>
+        }
+      </MapContainer>
+    </div>
   )
 }

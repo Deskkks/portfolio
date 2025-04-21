@@ -150,11 +150,11 @@ export default function Diario() {
             <label key={key}>
               <input className={styles.input} type="radio" name="classe" value={check.value}/>
               <span
-              className={styles.checkmark}
-              onMouseEnter={() => handleHover(check.value)}
-              onMouseOut={() => handleHoverOff(check.value)}
-              onClick={() => handleClick(check.value)}
-              style={check.styles}
+                className={styles.checkmark}
+                onMouseEnter={() => handleHover(check.value)}
+                onMouseOut={() => handleHoverOff(check.value)}
+                onClick={() => handleClick(check.value)}
+                style={check.styles}
               />
             </label>
           ))
