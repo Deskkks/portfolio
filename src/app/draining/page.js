@@ -2,8 +2,14 @@
 
 import style from './home.module.css'
 import SearchMap from './components/Search/search';
-import Map from './components/Map/Map'
 import Layout from "./components/layout"
+
+import dynamic from 'next/dynamic';
+
+const Map = dynamic(
+  () => import('./components/Map/Map'),
+  { ssr: false }
+);
 
 export default function Home() {
   
