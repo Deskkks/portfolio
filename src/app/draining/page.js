@@ -1,4 +1,6 @@
-﻿import style from './home.module.css'
+﻿"use client"
+
+import style from './home.module.css'
 import SearchMap from './components/Search/search';
 import Map from './components/Map/Map'
 import Layout from "./components/layout"
@@ -8,7 +10,7 @@ export default async function Home() {
   return (
     <Layout>
       <main className={style.main}>
-        <Map Search={SearchMap}/>        
+        <Map Search={SearchMap}/>
         <div className={style.infos}>
           <p>Em caso de enchentes, ligue:</p>
           <p><span className={style.circle}/>Defesa Civil (199): Peça ajuda imediata e saiba quais áreas são seguras ou onde encontrar abrigos.</p>
