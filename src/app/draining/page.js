@@ -5,7 +5,7 @@ import SearchMap from './components/Search/search';
 import Map from './components/Map/Map'
 import Layout from "./components/layout"
 
-export default async function Home() {
+export default function Home() {
   
   return (
     <Layout>
